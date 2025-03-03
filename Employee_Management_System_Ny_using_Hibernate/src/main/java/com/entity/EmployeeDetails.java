@@ -1,14 +1,20 @@
 package com.entity;
 
+import javax.annotation.processing.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "Employee_Details")
 public class EmployeeDetails 
 {
 	@Id
 	@Column(name = "Employee_Id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 private int empid;
 	@Column(name = "Employee_Name",nullable = false)
 private String empname;
